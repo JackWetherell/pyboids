@@ -17,8 +17,8 @@ class Universe():
     def __init__(self, resolution):
         self.state = States.MAIN
         self.resolution = resolution
-        self.count = 100
         self.walls = 0.02
+        self.count = 50
         self.boids = []
         for _ in range(self.count):
             position = Vector(np.random.random()*resolution[0]*0.80 + resolution[0]*0.10, np.random.random()*resolution[1]*0.80 + resolution[1]*0.10)
