@@ -1,5 +1,6 @@
 # Boids
-Boids simulation in pygame
+[Boids](https://en.wikipedia.org/wiki/Boids) simulation in pygame.
+
 # Requirements
 ```python 3.6.9```
 
