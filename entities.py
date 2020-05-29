@@ -37,8 +37,9 @@ class Boid(IDynamic):
                 if (self.position - boid.position).magnitude() < self.vision_radius:
                     self.visible_boids.append(boid)
 
-    def update_angular_velocity(self, universe, dt):
-        self.find_visible_boids(universe, dt)
+    def update_angular_velocity(self, universe, fps, dt, timestep):
+        if timestep % int(fps / 5.0) == 0:
+            self.find_visible_boids(universe, dt)
         pref_vector = Vector(0, 0)
         pref_vector += self.avoid_walls(universe, dt)
         pref_vector += self.separation(universe, dt)
@@ -67,7 +68,7 @@ class Boid(IDynamic):
         pref_vector = Vector(0, 0)
         for vb in self.visible_boids:
             pref_vector += (vb.position - self.position)*(-1.0 / (vb.position - self.position).magnitude()*100)
-        return pref_vector * 1.5
+        return pref_vector * 1.7
 
     def alignment(self, universe, dt):
         pref_vector = Vector(0, 0)
@@ -83,7 +84,7 @@ class Boid(IDynamic):
             pref_vector += (vb.position - self.position)
         if len(self.visible_boids) > 0:
             pref_vector = pref_vector
-        return pref_vector * 5.0
+        return pref_vector * 6.0
 
     def update_velocity(self, universe, dt):
         self.velocity.set_angle(self.velocity.get_angle() + self.angular_velocity * dt)

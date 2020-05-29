@@ -18,7 +18,7 @@ class Universe():
         self.state = States.MAIN
         self.resolution = resolution
         self.walls = 0.02
-        self.count = 50
+        self.count = 100
         self.boids = []
         for _ in range(self.count):
             position = Vector(np.random.random()*resolution[0]*0.80 + resolution[0]*0.10, np.random.random()*resolution[1]*0.80 + resolution[1]*0.10)
@@ -32,7 +32,7 @@ class Universe():
 
     def update(self, resolution, fps, dt, timestep, time):
         for boid in self.boids:
-            boid.update_angular_velocity(self, dt)
+            boid.update_angular_velocity(self, fps, dt, timestep)
         for boid in self.boids:
             boid.update_velocity(self, dt)
         for boid in self.boids:
