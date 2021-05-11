@@ -1,4 +1,4 @@
-# Boids
+# Pyboids
 [Boids](https://en.wikipedia.org/wiki/Boids) simulation in pygame.
 
 ![Demo](data/demo.gif)
