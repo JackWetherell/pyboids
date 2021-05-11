@@ -1,4 +1,6 @@
 '''Define the game mechanics and all possible states'''
+
+
 import random
 from enum import Enum
 import pygame

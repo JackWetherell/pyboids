@@ -1,4 +1,6 @@
 '''Define the graphics, colors, and layout'''
+
+
 from enum import Enum
 import pygame
 import entities

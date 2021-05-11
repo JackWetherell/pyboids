@@ -1,4 +1,6 @@
 '''Define all entities'''
+
+
 import random
 from abc import ABC as Interface
 from abc import abstractmethod

@@ -1,10 +1,11 @@
 # Boids
 [Boids](https://en.wikipedia.org/wiki/Boids) simulation in pygame.
 
-# Requirements
-```python 3.6.9```
+![Demo](data/demo.gif)
 
-```pygame 1.9.4```
+# Requirements
+```python 3.4.0```
+```pygame 2.0.1```
 
 # Installation 
 ```pip install -r requirements.txt```
